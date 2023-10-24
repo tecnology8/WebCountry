@@ -1,0 +1,39 @@
+﻿@model List<WebCountry.Models.Country>
+
+@{
+}
+
+<h1>Countries</h1>
+
+<br/>
+
+<a class="btn btn-primary" asp-area="" asp-controller="Country" asp-action="Add">Add Country</a>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Capital</th>
+            <th>Population</th>
+            <th>Economy</th>
+            <th>Currency</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var employee in Model)
+        {
+            <tr>
+                <td>@employee.Id</td>
+                <td>@employee.Name</td>
+                <td>@employee.Capital</td>
+                <td>@employee.Population</td>
+                <td>@employee.Economy.ToString("n2")</td>
+                <td>@employee.Currency</td>
+                <td><a href="Country/View/@employee.Id">View</a></td>
+            </tr>
+        }
+    </tbody>
+
+</table>

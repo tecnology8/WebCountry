@@ -1,0 +1,41 @@
+﻿@model WebCountry.ViewModel.UpdateCountryViewModel
+
+@{
+}
+
+<h1>Edit Country</h1>
+<form method="post" action="View">
+
+    <div class="mb-3">
+        <label for="" class="form-label">Id</label>
+        <input type="text" class="form-control" asp-for="Id" readonly>
+    </div>
+
+    <div class="mb-3">
+        <label for="" class="form-label">Name</label>
+        <input type="text" class="form-control" asp-for="Name">
+    </div>
+
+    <div class="mb-3">
+        <label for="" class="form-label">Capital</label>
+        <input type="text" class="form-control" asp-for="Capital">
+    </div>
+
+    <div class="mb-3">
+        <label for="" class="form-label">Population</label>
+        <input type="number" class="form-control" asp-for="Population">
+    </div>
+
+    <div class="mb-3">
+        <label for="" class="form-label">Economy</label>
+        <input type="number" class="form-control" asp-for="Economy">
+    </div>
+
+    <div class="mb-3">
+        <label for="" class="form-label">Currency</label>
+        <input type="text" class="form-control" asp-for="Currency">
+    </div>
+
+    <button type="submit" class="btn btn-primary">Submit</button>
+    <button type="submit" class="btn btn-danger" asp-action="Delete" asp-controller="Country">Delete</button>
+</form>
